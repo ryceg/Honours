@@ -1,0 +1,37 @@
+% prelude.tex (specification of which features in `mathphdthesis.sty' you
+% are using, your personal information, and your title & abstract)
+
+% Specify features of `mathphdthesis.sty' you want to use:
+\titlepgtrue % main title page (required)
+\signaturepagetrue % page for declaration of originality (required)
+\copyrighttrue % copyright page (required)
+\abswithesistrue % abstract to be bound with thesis (optional)
+\acktrue % acknowledgments page (optional)
+\tablecontentstrue % table of contents page (required)
+\tablespagetrue % table of contents page for tables (required only if you have tables)
+\figurespagetrue % table of contents page for figures (required only if you have figures)
+
+\title{HARMONIC BASED EXTENDED TECHNIQUES AND THEIR COMPOSITIONAL APPLICATIONS} % use all capital letters
+\author{Rhys Gray} % use mixed upper & lower case
+\prevdegrees{B.Mus Asc.Mus} % Used to specify your previous degrees...use mixed upper & lower case
+\advisor{Matthew Boden} % example: Professor Lawrence K. Forbes
+\dept{Music} % your academic department
+\submitdate{November, 2019} % month & year of your thesis submission
+
+\newcommand{\abstextwithesis}
+{I propose to explore a range of extended techniques that utilise the harmonic series and assess how they can be used in my, and other people’s, creative practice. These techniques include overtones, multiphonics, and subharmonics, playable on wind and stringed instruments, and voice. While some, such as overtone singing, are well established and understood, others, such as subharmonics on stringed instruments, are still immature in terms of both repertoire and resources available.  The timbral potentials of these techniques are uncharted territories and collectively represent a whole sound world that remains relatively inaccessible to contemporary art music composers.
+
+To ensure that only new ground is covered, I will conduct a review of the literature and resources that are readily available to composers to assess what techniques require further investigation and refinement. By researching these techniques and the mechanics behind them, interviewing industry professionals, and analysing recordings made, I hope to gain a better understanding of how the harmonic series and related techniques can be implemented in my practice. As part of both the analysis of techniques and my compositional practice, I will assess not only the compositional potential, but also the practicality of techniques. Reviewing the feasibility and notational aspects of the techniques will render the exegesis a practical document to reference when researching whether to include a technique.
+
+I aim for my resulting exegesis to become a useful reference source for artists interested in learning about the mechanics, qualities, and potential implementations of these harmonic based extended techniques. The works that I compose accompanying the exegesis will show idiomatic treatment of the techniques and serve as references as such in the exegesis. The dissemination of the material I research will contribute to the accessibility of new sound possibilities for artists.
+}
+
+\newcommand{\acknowledgement}
+{Thank you to my supervisor, Matthew Boden, my teachers Dr. Maria Grenfell and Scott McIntyre, my piano teacher Sally Ward, my family, and my cats Buttercup and Millie.}
+
+
+% Take care of things in `mathphdthesis.sty' behind the scenes.
+% Basically just does a check of all the fields that have been activated
+% above and fills out the appropriate pages and adds them to the thesis.
+\beforepreface
+\afterpreface
