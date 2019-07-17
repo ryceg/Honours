@@ -44,6 +44,9 @@
 \ProvidesClass{QMSThesis}[1999/09/10 v1.4a Standard LaTeX document class]
 \RequirePackage{fancyhdr}
 \RequirePackage{setspace}
+\RequirePackage{turabian-formatting}
+\usepackage{setspace}
+\doublespacing
 
 \newcommand\@ptsize{}
 \newif\if@restonecol
@@ -168,6 +171,7 @@
   %---------------------------------
   \setlength\parindent{0em}				%% Sert Paragraph Indent
   \setlength\parskip{4.0ex \@plus0.5ex \@minus2.0ex}
+  \doublespacing
   \renewcommand{\baselinestretch}{2}\small\normalfont
 
   \newcommand{\degree}[1]{\gdef\@degree{#1}}
@@ -319,7 +323,7 @@
   
           I declare that this thesis contains no material which has been accepted for a degree or diploma by the University or any other institution, except by way of background information and duly acknowledged in the thesis, and to the best of my knowledge and belief no material previously published or written by another person except where due acknowledgement is made in the text of the thesis, nor does the thesis contain any material that infringes copyright.\\ 
 \vskip 0.02\textheight
-This thesis may be reproduced, archived, and communicated in any material form in whole or in part by the University of Tasmania or its agents. The publishers of the papers \citet{remenyi2011} and \citet{remenyi2012b}, included as Chapters 2 and 3, hold the copyright for that content, and access to the material should be sought from the respective journals. The remaining non published content of the thesis may be made available for loan and limited copying in accordance with the Copyright Act 1968. 
+This thesis may be reproduced, archived, and communicated in any material form in whole or in part by the University of Tasmania or its agents. 
 	
 \par
           \vskip 0.1\textheight
