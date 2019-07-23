@@ -3,7 +3,7 @@
 % Set page numbering to arabic the first time we commence a chapter.
 % This is required to get the page numbering correct.
 \pagenumbering{arabic}
-
+\doublespace 
 % Note that the text in the [] brackets is the one that will
 % appear in the table of contents, whilst the text in the {}
 % brackets will appear in the main thesis.
@@ -11,8 +11,8 @@
 
 \section{Methodology}
 My research topic “Harmonic Based Extended Techniques and their Compositional Applications” is a review of techniques, and how they can be incorporated in my own practice. As such, it is highly subjective, and the research methodology will reflect this, being largely qualitative based. Quantitative based research, such as the analysis of techniques using spectral analysis will be used to support subjective claims. Each technique will be reviewed individually, as they are discrete from one another. Because many of the techniques are uncommon or difficult, consultation with players is paramount to undertake a fair assessment of the techniques. Document analysis of technique manuals will augment oral history research into the qualities and attributes of techniques. 
-To make an educated opinion on the value of a technique, data must first be collected. Compilation of techniques both in isolated, controlled environments, and in context in musical works will allow a full and accurate use of the analytical method on recordings. Using a Fast Fourier Transformation as in Pablo E. Riera’s thesis on saxophone multiphonics, the prominent harmonics of each technique will be uncovered, for harmonic analysis.\cite{rieraComparativeStudySaxophone2014} Examination of techniques in musical context will allow for value judgements to be made about the musical effectiveness of the technique. The recorded data will be treated, and then interpreted and analysed, with the results being implemented in new works.\cite{torresMultiphonicsCompositionalElement2012} Through this process, my research will feed into my practice.
-A holistic approach, taking both the sound possibilities and the player implications (“is this technique too difficult for the average player?”, “do I need to write for specific artists if I want to use this technique?”, etc.) is necessary to evaluate its overall potential for incorporation in my practice. To overcome this, oral history methodology will be used to gather first-hand experiences and opinions on techniques. In Bonnie Mara Barnett’s “Aspects of Vocal Multiphonics”, she conducts several interviews with singers to better understand the way the technique functions from a performer’s perspective.\cite{barnettAspectsVocalMultiphonics1977} Interviewing musicians able to play these techniques will deepen my understanding of the mechanics and technical aspects of creating these techniques. While my research is concerned with how I personally can incorporate these techniques into my practice, an effort to interview peer composers will be made, especially those that share common compositional traits with me. Their experiences with composing for these extended techniques will provide more data points to draw comparisons from, and contemporary composer’s compositions and feedback were a valuable component of Dr. Sarah Watts’ thesis to assess the effectiveness of the techniques. 
+To make an educated opinion on the value of a technique, data must first be collected. Compilation of techniques both in isolated, controlled environments, and in context in musical works will allow a full and accurate use of the analytical method on recordings. Using a Fast Fourier Transformation as in Pablo E. Riera’s thesis on saxophone multiphonics, the prominent harmonics of each technique will be uncovered, for harmonic analysis.\autocite{rieraComparativeStudySaxophone2014} Examination of techniques in musical context will allow for value judgements to be made about the musical effectiveness of the technique. The recorded data will be treated, and then interpreted and analysed, with the results being implemented in new works.\autocite{torresMultiphonicsCompositionalElement2012} Through this process, my research will feed into my practice.
+A holistic approach, taking both the sound possibilities and the player implications (“is this technique too difficult for the average player?”, “do I need to write for specific artists if I want to use this technique?”, etc.) is necessary to evaluate its overall potential for incorporation in my practice. To overcome this, oral history methodology will be used to gather first-hand experiences and opinions on techniques. In Bonnie Mara Barnett’s “Aspects of Vocal Multiphonics”, she conducts several interviews with singers to better understand the way the technique functions from a performer’s perspective.\autocite{barnettAspectsVocalMultiphonics1977} Interviewing musicians able to play these techniques will deepen my understanding of the mechanics and technical aspects of creating these techniques. While my research is concerned with how I personally can incorporate these techniques into my practice, an effort to interview peer composers will be made, especially those that share common compositional traits with me. Their experiences with composing for these extended techniques will provide more data points to draw comparisons from, and contemporary composer’s compositions and feedback were a valuable component of Dr. Sarah Watts’ thesis to assess the effectiveness of the techniques. 
 Augmenting the interviews, document analysis will be used on technique manuals that detail the production and quality of techniques. By building off the framework of classification articulated in Robert Dick’s seminal “The Other Flute” and extending it to accommodate a variety of techniques, comparisons across different techniques will be able to be made.  Through this, an understanding of the technical and mechanical aspects of the techniques will be gained. Techniques will be assessed on their practicality, ease of use, timbral qualities, and compatibility with my practice. Notation for the techniques varies from composer to composer, and where a common notational standard has not been developed (such as violin subharmonics), a document analysis of current notational standards will be undertaken, making reference to Elaine Gould’s seminal text on music notation, “Behind Bars”.  Through this, and subsequent consultation with players, development of a consistent and effective notational language can be achieved.
 Through the collection of data from a multitude of sources and a range of different methods, it will become evident how harmonic based extended techniques are to be treated idiomatically. By undertaking a holistic review of the techniques including performer and composer points of view, the qualitative research I perform will enable not only me to incorporate these techniques into my own practice, but future composers that are interested in these techniques.
 
@@ -44,39 +44,33 @@ Here we have started a new page to show how the headers work. The
 text in the header should be the last section title declared at
 the end of the current page.
 
-This new paragraph shows how to set \index{index items}index items
-and \index{index items!subindex items} subindex items.
+This new paragraph shows how to set\index{index items}index items
+and\index{index items!subindex items} subindex items.
 
 \subsection{New Subsection}
 Here's a subsection with some simple maths $a^2+b^2=c^2$.
 
 \subsubsection{subsubsection}
-Here's a \index{subsubsection}subsubsection\ldots oooooooohh wow
+Here's a\index{subsubsection}subsubsection\ldots oooooooohh wow
 wee!!!!!!
 
-\newpage
-Some more text to check indent and show how references work
+% \newpage
+% Some more text to check indent and show how references work
 
-Here's how we place a figure (Figure \ref{fig:utas}) on the page.
-\begin{figure}[hbtp]
-\begin{center}
-\scalebox{.30}{\includegraphics{Utas_vert_BW}} \caption{
-\label{fig:utas} The UTas logo}
-\end{center}
-\end{figure}
 
-And finally, here's a table example (Table \ref{tab:taba}).
-\begin{table}[hbtp]
-\begin{center}
-\begin{tabular}{|r|r|r|r|r|}
-\hline
-$n=$&2&3&4&5\\
-\hline
-$c$ (rad/day)&1.67&0.52&0.06&-0.17\\
-\hline
-period (days)&3.75&12.00&100.00&37.50\\
-\hline
-\end{tabular}
-\end{center}
-\caption{\label{tab:taba}A simple table}
-\end{table}
+
+% And finally, here's a table example (Table \ref{tab:taba}).
+% \begin{table}[hbtp]
+% \begin{center}
+% \begin{tabular}{|r|r|r|r|r|}
+% \hline
+% $n=$&2&3&4&5\\
+% \hline
+% $c$ (rad/day)&1.67&0.52&0.06&-0.17\\
+% \hline
+% period (days)&3.75&12.00&100.00&37.50\\
+% \hline
+% \end{tabular}
+% \end{center}
+% \caption{\label{tab:taba}A simple table}
+% \end{table}

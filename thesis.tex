@@ -1,4 +1,5 @@
-% Declare overall type of document (use 11pt report class on A4 paper).
+% thesis.tex (starting point of a UTas mathematics thesis)
+
 % Note that the following defaults are also contained in the 'report' class
 % (this is not exhaustive...see appropriate references for all options)
 % 'oneside' mode...overide with 'twoside' to force output for two-sided printing.
@@ -15,12 +16,32 @@
 
 % Declare overall type of document (use 11pt report class on A4 paper).
 \documentclass[12pt,a4paper]{turabian-thesis}
-
 % If you want to generate an index you should include the following command
 % which puts a makeindex command in the preamble. Additionally, you need to un-comment
 % the file 'index' in the '\includeonly' command below and also include the 'index'
 % file in the main document.
 \makeindex
+
+\newcommand{\blockcomment}[1]{}
+\newcommand{\UseFirstVersion}[2]{#1}
+\newcommand{\UseSecondVersion}[2]{#2}
+\newcommand{\UseNeitherVersion}[2]{}
+
+
+
+\documentclass{turabian-thesis}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes, ellipsis}
+
+% Specify paper size with geometry package
+\usepackage[pass, letterpaper]{geometry}
+
+% For citations, use the biblatex-chicago package
+\usepackage{biblatex-chicago}
+\addbibresource{backmatter/works-cited.bib}
+
 
 % Include the style file which contains all the required formatting
 % information that is set out in the Research Higher Degrees Resource
@@ -32,7 +53,155 @@
 % 'sectsty' for generating stylised chapter and section headings.
 % You will need to make sure your LaTeX installation has these packages
 % installed...else it wont work :(
-\usepackage{mathphdthesis}
+
+\input{utasmathphdthesis.sty}
+
+\usepackage{etoolbox}
+
+\newtoggle{usesamssymb}
+\toggletrue{usesamssymb}
+
+\newtoggle{usesMnSymbol}
+\toggletrue{usesMnSymbol}
+
+\newtoggle{usesScriptFonts}
+\toggletrue{usesScriptFonts}
+
+\newtoggle{usesCalligra}
+\togglefalse{usesCalligra}
+
+\newtoggle{usesChancery}
+\toggletrue{usesChancery}
+
+\newtoggle{frakok}
+\toggletrue{frakok}
+
+%\let\chapter\section
+
+%\usepackage{accents}
+%\usepackage{algorithm2e}
+%\usepackage{frankenstein}
+%\usepackage{graphicx}
+%\usepackage{slashed}
+\usepackage{a4}
+\usepackage{esvect}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+%-- Fonts
+
+\iftoggle{usesMnSymbol}{
+  \usepackage{mathpazo}
+  \usepackage{MnSymbol}
+}{
+  \usepackage{amssymb}
+  \usepackage{amsfonts}
+}
+
+%\usepackage{lmodern}
+\usepackage{outline}
+%\renewcommand*\familydefault{ocm}
+\usepackage[outline]{contour}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{url,lineno}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{listings}
+%%\usepackage{color}
+\usepackage[usenames]{xcolor}
+\usepackage{textcomp}
+\usepackage{accents}
+%\usepackage{tabularx}
+%\usepackage{scalerel}
+
+\usepackage{booktabs}
+
+\usepackage[authoryear]{natbib}
+%% \usepackage[
+%%     backend=bibtex,
+%%     style=authoryear-icomp,
+%%     sortlocale=en_AU,
+%%     natbib=true,
+%%     url=false, 
+%%     doi=true,
+%%      eprint=false
+%% ]{biblatex}
+%
+%%%%\addbibresource{biblatex-examples.bib}
+%%\usepackage[]{hyperref}
+%%\setcitestyle{authoryear, open={((},close={))}
+
+
+\DeclareRobustCommand\chancery{
+  \fontfamily{pzc}
+  \fontencoding{T1}
+  \selectfont
+}
+\def\textpzc#1{\begingroup \fontfamily{pzc}
+  \fontencoding{OT1}\selectfont #1\endgroup}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\DeclareMathAlphabet{\chanc}{OT1}{pzc}{m}{it}
+
+\iftoggle{usesMnSymbol}{
+  \typeout{Using MnSymbol}
+  \DeclareRobustCommand\mnsymbol{
+    \fontfamily{mns}
+    \fontencoding{T1}
+    \selectfont}
+  \typeout{MnSymbol 1}
+  \def\textmns#1{\begingroup \fontfamily{mns}
+    \fontencoding{OT1}\selectfont #1\endgroup}
+  \typeout{MnSymbol 2}
+  \DeclareMathAlphabet{\mathmns}{OT1}{mns}{m}{it}
+  \typeout{got it}
+  \def\mnsym#1{{\mnsymbol #1}}
+  \typeout{and bbm}
+   \DeclareRobustCommand\pazo{\fontfamily{pzo}
+     \fontencoding{T1}
+     \selectfont}
+  %% \def\textbbm#1{\begingroup \fontfamily{bbm}
+  %%   \fontencoding{T1}\selectfont #1\endgroup}
+  \DeclareMathAlphabet{\mathbb}{OT1}{pzo}{bb}{it}
+  %%\def\bbm#1{{\Bb #1}}
+}{
+}
+
+%%\usepackage{breqn}
+
+% compile with xelatex
+%\usepackage{fourier}
+% set math font
+%\usepackage[no-math]{fontspec}  % to load non-Latex fonts (keeping math font)
+%\setmainfont{Palatino}
+% fontspec reverts to CM, so reset to Times
+%\setsansfont{Optima}
+% set sans-serif font
+%-\usepackage{sectsty}
+% to override section fonts
+%-\allsectionsfont{\fontspec{Optima}}  % set header font
+
+\usepackage[T1]{fontenc}
+%% Do nothing else -- it's the default allegedly set things to CM
+
+
+
+\typeout{Graphics}
+\DeclareGraphicsExtensions{.eps,.pdf,.png}
+
+
+%\newcommand{\hmmax}{0}
+%\newcommand{\bmmax}{0}
+
+
+
+\usepackage{changepage} %% provides adjustpage
+\usepackage{fp} %% manipulate variables in infix
+\usepackage{setspace}
+
+
+\typeout{Got packages}
 
 % Here you would include any additional packages that you want to use.
 % You should make sure they don't clash with the above packages that
@@ -41,34 +210,72 @@
 % Specify which pieces (other .tex files) you plan to include. You can comment
 % out files that you will include later or have already finished to speed
 % up TeX processing
-\includeonly{
-prelude % Contains all the relevant candidate information (name, degrees, abstract etc)
-,newcom % Place all you new commands in here
-,chap1  % The first chapter
-,chap2  % The second chapter
-,chap3  % The third chapter
-,chap4  % The fourth chapter
-,app0   % Needed to switch to appendix mode
-,app1   % The first appendix
-,app2   % The second appendix
-,biby   % Makes the bibliography from the BibTeX database
-,index  % Places the index in the thesis
-}
+%% \includeonly{
+%% prelude % Contains all the relevant candidate information (name, degrees, abstract etc)
+%% ,newcom % Place all you new commands in here
+%% ,chap1  % Introduction
+%% ,chap2  % paper 1
+%% ,chap3  % Definitions, proofs
+%% ,chap4  % paper 2
+%% ,chap5  % explicit model
+%% ,concl  % conclusion ... of course
+%% ,app0   % code for explicit model
+%% ,app1   % limited results
+%% ,biby   % Makes the bibliography from the BibTeX database
+%% ,index  % Places the index in the thesis
+%% }
 
-% Begin the thesis
-\begin{document}
 
 % Include all the pieces of your thesis in here.
-\include{prelude}
-\include{newcom}
-\include{chap1}
-\include{chap2}
-\include{chap3}
-\include{chap4}
-\include{app0}
-\include{app1}
-\include{app2}
-\include{biby}
-\include{index}
+% \input{manifest} % lowish level definitions, commands and such
+\typeout{Starting document}
+\begin{document}
+\input{prelude} % Contains all the relevant candidate information (name, degrees, abstract etc)
+\input{newcom} % Place all you new commands in here
+\input{chap1}  % Introduction
+\input{chap2}  % paper 1
+\input{chap3}  % Definitions, proofs
+\input{chap4}  % paper 2
+\input{concl}  % conclusion ... of course
+\input{app0}   % switch to appendix mode
+\input{app1}   % section 1: environment , section 2: code for explicit model
+\input{app2}   % section 1: environment , section 2: code for explicit model
+\input{biby}   % Makes the bibliography from the BibTeX database
+\input{index}  % Places the index in the thesis
+
+
+
+
+%% With unicode-math Unicode math fonts support a wide range of
+%% symbols. Among these are a lot of symbols which were only available
+%% using supplemental package when not using Unicode fonts.
+
+%% The unicode-math package enables you to load these Unicode math
+%% fonts. Some are available in TeXlive, such as Latin Modern Math, a
+%% Unicode port of the popular lmodern package.
+
+%% A list of symbols, defined by some of these fonts can be found in
+%% the document Every symbol (most symbols) defined by unicode-math by
+%% the developer of unicode-math and TeX.SX user Will Robertson.
+
+%% Let's take for example, the \llangle and \rrangle symbols. These
+%% are not available in Latin Modern Math but they are in XITS
+%% Math. To import these when using Latin Modern Math as the main math
+%% font, one has to use the range option. The range option accepts
+%% Unicode slots or alternatively, for easier understanding, the
+%% mnemonic names of the symbols. Be sure to load the custom range
+%% after setting the main math font. Otherwise your hand-crafted set
+%% of symbols will be overwritten.
+
+%% \documentclass{article}
+%% \usepackage{unicode-math}
+%% \setmathfont{Latin Modern Math}
+%% \setmathfont[range={\llangle,\rrangle}]{XITS Math}
+%% \begin{document}
+%% $\llangle a \rrangle$
+%% \end{document}
+
+%% enter image description here
 
 \end{document}
+
