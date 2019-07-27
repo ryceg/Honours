@@ -345,8 +345,8 @@
 \submissioninfo{%
 	An Exegesis Submitted to\par
 	Conservatorium of Music\par
-	for partial fulfilment of the degree\par
-	Bachelor of Music (Honours)}
+	in partial fulfilment of the requirements for the degree of \par
+	Bachelor of Music with Honours (or Bachelor of Music (Elite) with Honours)}
 
 \department{}
 
