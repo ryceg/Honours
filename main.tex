@@ -11,6 +11,7 @@
 
 \documentclass{turabian-thesis}
 
+\usepackage{fancyhdr}
 
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes, ellipsis}
@@ -38,7 +39,7 @@
 
 \begin{document}
 
-\frontmatter
+\frontmatter{}
 \maketitle
 \include{frontmatter/declaration}
 \include{frontmatter/abstract}
@@ -46,13 +47,13 @@
 \tableofcontents{}
 \listofillustrations{}
 
-\mainmatter
+\mainmatter{}
 \include{mainmatter/introduction}
 \include{mainmatter/chapter1}
 \include{mainmatter/chapter2}
 \include{mainmatter/conclusion}
 
-\backmatter
+\backmatter{}
 \begin{appendixes}
     \include{backmatter/appendixa}
     \include{backmatter/appendixb}
