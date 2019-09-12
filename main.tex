@@ -8,17 +8,29 @@
 % authordate: support for the author-date citation style
 % endnotes: support for endnotes
 
-
+% document class handles the big-picture formatting
 \documentclass{turabian-thesis}
 
+% fancyhdr does fancy headers
 \usepackage{fancyhdr}
+
+% microtype handles microscopic improvements
+\usepackage{microtype}
+
+% graphicx handles graphics
 \usepackage{graphicx}
 
+% cmap makes pdfs searchable
+\usepackage{cmap}
+
 \usepackage[utf8]{inputenc}
+
+% csquotes handles quotations
+% ellipsis handles ellipses... obviously.
 \usepackage{csquotes, ellipsis}
 
 % Specify paper size with geometry package
-\usepackage[pass, letterpaper]{geometry}
+% \usepackage[pass, letterpaper]{geometry}
 
 % For citations, use the biblatex-chicago package
 \usepackage{biblatex-chicago}
@@ -27,7 +39,8 @@
 % For left-aligned
 % \usepackage[document]{ragged2e}
 
-% For lorem ipsum text.
+% For lorem ipsum text. use \lipsum[5] to create placeholder text.
+% Very handy to get an overview of how it's going to look, but also can make you feel unreasonably confident- beware!
 \usepackage{lipsum}
 
 
@@ -38,6 +51,7 @@
 \date{\today}
 
 
+% this is where the document starts. Comment out things that you don't need.
 \begin{document}
 
 \frontmatter{}
