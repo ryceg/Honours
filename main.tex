@@ -60,6 +60,12 @@
 % for referencing the titles of sections
 \usepackage{nameref}
 
+% for appendices
+\usepackage{appendix}
+
+% for including pdf pages
+\usepackage{pdfpages}
+
 % Information for title page
 \title{Harmonic Based Extended Techniques and their Compositional Applications}
 \subtitle{An Investigation in New String Technique}
@@ -87,9 +93,14 @@
 \include{mainmatter/conclusion}
 
 \backmatter{}
+
 \begin{appendixes}
-    \include{backmatter/appendixa}
-    \include{backmatter/appendixb}
+    \include{backmatter/app0}
+    \include{backmatter/app1}
+    \include{backmatter/app2}
+    \include{backmatter/app3}
+    % \include{backmatter/app4}
+    % \include{backmatter/appendixb}
 \end{appendixes}
 
 \printbibliography{}
