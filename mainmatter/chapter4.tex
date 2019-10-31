@@ -9,7 +9,7 @@ Due to the limited number of permutations of these techniques, the Dick model of
 It will also take into account how common the technique is, as well as notational challenges.
 
 \subsection{Notation}
-If the composer wishes to use a technique once off, or in sparing amounts, the technique can be shown with plain English text explaining what is desired of the player.
+If the composer wishes to use a technique once off, or in sparing amounts, the technique can be shown with plain English text explaining what is desired of the player.\autocite[494]{gouldBars2011}
 For all other cases where a technique is used multiple times, composers must include the technique in the frontmatter of the work that it is used in.\autocite[494]{gouldBars2011}
 If a technique uses a new symbol or notehead, this should be reflected in the frontmatter.
 Where possible, composers should retain the same clef for both fingered and sounding pitches.\autocite[422]{gouldBars2011}
@@ -40,7 +40,7 @@ Strings with a single or nylon core make the technique easier, due to their low 
 Players may find that subharmonics are easier on older strings, and they may also find that adding twists to the string may also help, or hinder the production of subharmonics, as shown in \autoref{tab:twistTable}.\autocite[]{kimuraHowProduceSubharmonics1999}
 
 
-Botting notes that experimentations with octavic subharmonics yielded a pitch slightly flatter than an octave. He states \begin{quotation}
+Botting notes that experimentations with octavic subharmonics yielded a pitch slightly flatter than an octave. He states: \begin{quotation}
   I developed a left hand finger technique whereby I rotate my hand slightly clockwise, pivoting on the finger stopping the string, which has the effect of sharpening the subharmonic enough to be more in tune with the fundamental.\autocite[111]{bottingDevelopingPersonalVocabulary2019}
 \end{quotation}
 
@@ -110,8 +110,59 @@ Composers should be aware that of the pair, the multiphonic node closer to the b
 
 \subsection{Notation of Multiphonics}\label{sec:notation-multiphonics}
 Much has been written about multiphonics, and they are a well established technique in woodwind writing.
-The notation between them differs, though; precise fingering charts above resultant pitches do not translate precisely into string writing.
-Fallowfield's method of denoting the multiphonic with a diamond notehead is, in the author's opinion, preferable to the alternatives.
+The notation between them differs, though; precise fingering charts above resultant pitches do not translate precisely into string writing.\footnote{The relation between string and woodwind multiphonics is discussed more in-depth \hyperref[sec:multiphonicsWoodwind]{in chapter 2.}}
+Fallowfield states: \begin{quotation}
+    To notate ‘pure’ multiphonics accurately in a score, however, it is necessary to indicate both the left-hand finger position and the pitch content. 
+    The left-hand finger touches the string above the node of the highest harmonic that contributes to the multiphonic, so the finger position is always that of the highest harmonic in the group. 
+    I suggest notating finger position with the rhombus that is usually used for harmonic finger pressure. 
+    The pitch of the contributing harmonics could be notated in brackets or on a separate stave.
+    It is necessary to indicate which string the multiphonic should be played on and helpful to use the indication ‘M’ for multiphonic.\autocite[http://www.cellomap.com/index/the-string/multiphonics-and-other-multiple-sounds.html]{fallowfieldCelloMap}
+\end{quotation}
+Below, I have notated the permutations of what Fallowfield has described, and will let the reader draw their own conclusion as to which is most appropriate.
+Her example omits the necessary string, but Gould suggests several different options; the inclusion of the corresponding string number (i.e.\ `I', `IV'), the usage of Italian (i.e.\ `sul E', `sul G'), or by notating the fundamental on the stave, using ``a small bracketed black notehead (regardless of duration) for the open string and for the first note only of a tied harmonic.''\autocite[418]{gouldBars2011}
+In \autoref{fig:multiphonicNotationCent}, we see the specific cents tuning for the fingered note, contrasted with \autoref{fig:multiphonicNotationQuarter}, which uses quarter tones to convey the relevant pitching data, both with a \emph{suono reale} stave indicating the sounding pitch above.
+
+\begin{figure}
+  \centering
+  \includegraphics{./resources/multiphonicNotationCent.pdf}
+  \caption{Multiphonic notation with cents}\label{fig:multiphonicNotationCent}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{./resources/multiphonicNotationQuarter.pdf}
+  \caption{Multiphonic notation with quarter tones}\label{fig:multiphonicNotationQuarter}
+\end{figure}
+While \autoref{fig:multiphonicNotationCent} is more precise, the horizontal space usage is greater than that of \autoref{fig:multiphonicNotationQuarter}; if using text to specify which string to use, it may quickly become cumbersome to read.
+
+Gould states ``wherever possible, retain the same clef for both fingered and sounding pitches''.\autocite[422]{gouldBars2011}
+This is sometimes practical, but gives rise to the issue of indicating pitch. 
+She once again suggests several practical methods of communicating resultant pitch, as a ``small [black] notehead [without a stem] in brackets directly above or after the fingered pitches'', an ossia stave with the resultant pitches above, or notated in a footnote using a cue stave.\autocite[421]{gouldBars2011}
+This advice is for harmonics, but can be applied to multiphonics as evidenced in \autoref{fig:multiphonicNotationOneLine}
+The ossia staff, or \emph{suono reale} if necessary for the entirety of the work\footnote{\emph{suono reale} should be full sized, while ossia staves are 3/4 sized.}, can have the multiphonics notated as a rhythm, as seen in \autoref{fig:multiphonicNotationOssia}.
+
+\begin{figure}
+  \centering
+  \includegraphics{./resources/multiphonicNotationOssia.pdf}
+  \caption{Multiphonic notation using an ossia line}\label{fig:multiphonicNotationOssia}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{./resources/multiphonicNotationOneLine.pdf}
+  \caption{Multiphonic notation on one line}\label{fig:multiphonicNotationOneLine}
+\end{figure}
+
+Further simplifications can be made if there is no clef change, making it possible to omit the `M' technique text denoting it as a multiphonic.
+
+\begin{figure}
+  \centering
+  \includegraphics{./resources/multiphonicNotationOneLineClef.pdf}
+  \caption{Multiphonic notation in one clef}\label{fig:multiphonicNotationOneLineClef}
+\end{figure}
+
+There are several ways of notating the same (or similar) information, and due to the cumbersome nature of multiphonics, there is often a deficit of either vertical or horizontal space.
+However, with the flexibility of each element, there is surely be a method of notating multiphonics idiomatically that can be implemented in every score that makes use of them.
 
 \subsubsection{Multiphonic Frontmatter}\label{sec:multiphonicFrontmatter}
 \begin{quotation}
@@ -166,7 +217,7 @@ Half-harmonics can be notated in one of several ways (see \autoref{fig:halfHarmo
 \begin{figure}
     \includegraphics[width=\linewidth]{./resources/halfHarmonicNotationExamples.pdf}
     \caption{Half-harmonic notation examples}\label{fig:halfHarmonicNotationExamples}
-  \end{figure}
+\end{figure}
 
   
 The simplest method, using text rather than a graphic may produce good results, as seen in \autoref{fig:textSymbolNotation}.
@@ -184,7 +235,7 @@ The second example, as seen in Sciarrino's \emph{Six Capricci for Violin} (\auto
 The `slant' of the regular harmonic notehead is opposite to the unfinished diamond, going from up to down, helping distinguish it.
 
 The third example unfortunately is not without issues, either; (\emph{normale}) harmonics denoted with a circle are exclusively for the resultant pitch.\autocite[419]{gouldBars2011} 
-While half harmonics \emph{do} produce the notated pitch, rapid transitions between half harmonics and \emph{normale} harmonics using half-filled circles may cause confusion due to the translation between a symbol that denotes pressure needed and a resultant harmonic respectively, as illustrated in \autoref{fig:circleExample}.
+While half harmonics do produce the notated pitch, rapid transitions between half harmonics and \emph{normale} harmonics using half-filled circles may cause confusion due to the translation between a symbol that denotes pressure needed and a resultant harmonic respectively, as illustrated in \autoref{fig:circleExample}.
 This is compounded by the circle notation's inability to handle harmonics that fall well outside the range of the staff (i.e.\ major 3rd and minor 3rd harmonics), resulting in a need for at least two types of notation; circular half-harmonics, and diamond noteheads for problematic \emph{normale} harmonics.
 
 \begin{figure}
