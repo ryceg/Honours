@@ -69,6 +69,29 @@
 % lets you cite in captions
 % \usepackage{ftnxtra}
 
+
+% \blockcomment{This text does not appear in the rendered document}
+\newcommand{\blockcomment}[1]{}
+
+% The following commands take two arguements, each delimited by braces
+% Consider the examples
+%% "Eat \UseFirstVersion{apples}{oranges} daily" produces:     Eat apples daily
+%% "Eat \UseSecondVersion{apples}{oranges} daily" produces:    Eat orangeses daily
+%% "Eat \UseBothVersions{apples}{oranges} daily" produces:     Eat apples OR oranges daily
+%% "Eat \UseNeitherVersion{apples}{oranges} daily" produces:   Eat daily
+
+\newcommand{\UseFirstVersion}[2]{#1}
+\newcommand{\UseSecondVersion}[2]{#2}
+\newcommand{\UseBothVersions}[2]{
+  {#1}
+
+  \textbf{or}
+
+  \textsc{#2}}
+\newcommand{\UseNeitherVersion}[2]{}
+
+
+
 % Information for title page
 \title{Harmonic Based Extended Techniques and their Compositional Applications}
 \subtitle{An Investigation in New String Techniques}
