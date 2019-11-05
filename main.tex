@@ -52,8 +52,15 @@
 % Very handy to get an overview of how it's going to look, but also can make you feel unreasonably confident- beware!
 \usepackage{lipsum}
 
+\usepackage{xcolor}
+
 % hyperlinks! The option [hidelinks] makes it still black i.e. not obviously a hyperlink.
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks = false,
+    linkbordercolor = {white},
+    urlcolor = {blue}
+}
 
 \usepackage{caption} % hypcap is true by default so [hypcap=true] is optional in \usepackage[hypcap=true]{caption}
 
